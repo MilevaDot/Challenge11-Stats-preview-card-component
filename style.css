@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lexend+Deca:wght@100..900&display=swap');
+
+:root {
+    --background: hsl(233, 47%, 7%);
+    --card-background: hsl(244, 38%, 16%);
+    --soft-violet: hsl(277, 64%, 61%);
+    --white: hsl(0, 0%, 100%);
+    --main-paragraph-color: hsla(0, 0%, 100%, 0.75);
+    --stat-headings: hsla(0, 0%, 100%, 0.6);
+    --font-inter: 'Inter', serif;
+    --font-lexend-deca: 'Lexend Deca', serif;
+    --font-size-paragraph: 15px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--font-inter);
+}
+
+body {
+    height: 100vh;
+    align-content: center;
+    background-color: var(--background);
+}
+
+main {
+    display: flex;
+    margin: 0 auto;
+    max-width: 80%;
+    background-color: var(--card-background);
+    flex-direction: row-reverse;
+    border-radius: 14px;
+}
+
+main section {
+    width: 50%;
+}
+
+header h1 {
+    color: var(--white);
+    font-size: 45px;
+}
+
+header h1 span {
+    color: var(--soft-violet);
+}
+
+.content-text {
+    padding: 50px 50px 0 50px;
+}
+
+.paragraph {
+    color: var(--main-paragraph-color);
+    font-size: 18px;
+}
+
+footer {
+    display: flex;
+    justify-content: space-between;
+}
+
+footer h3 {
+    color: var(--white);
+    font-size: 36px;
+}
+
+footer p {
+    color: var(--stat-headings);
+    font-size: 16px;
+    font-weight: 300;
+}
+
+footer div {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.content-image img {
+    width: 100%;
+    height: 100%;
+}
+
+.content-image {
+    position: relative;
+}
+
+.main-content {
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+    padding: 20px 60px 0px 0;
+}
+
+.over-image {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: hsla(277, 64%, 61%, 0.5);
+}
+
+@media ( width <= 375px ) {
+    main {
+        display: block;
+        margin: 40px auto;
+        border-radius: 14px;
+        overflow: hidden;
+    }
+    main section {
+        width: 100%;
+    }
+    .content-image img {
+        width: 100%;
+    }
+    header h1 {
+        color: var(--white);
+        font-size: 24px;
+        text-align: center;
+    }
+    .content-text {
+        padding: 20px;
+    }
+    .paragraph {
+        color: var(--main-paragraph-color);
+        font-size: 14px;
+        text-align: center;
+    }
+    .main-content {
+        display: flex;
+        flex-direction: column;
+        gap: 60px;
+        padding: 20px;
+    }
+    footer {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        gap: 24px;
+    }
+    footer h3 {
+        font-size: 24px;
+        text-align: center;
+    }
+    footer p {
+        font-size: 12px;
+    }
+}
